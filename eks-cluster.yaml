@@ -8,7 +8,7 @@
       community.aws.eks_cluster:
         name: Ansible-EKS-CLUSTER
         version: 1.27
-        role_arn: arn:aws:iam::625243961866:role/EksClusterRole
+        role_arn: arn:aws:iam::xxxxxxxx:role/EksClusterRole
         subnets:
           - subnet-0c819740100e5e234
           - subnet-08cfb65242d6db186

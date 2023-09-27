@@ -8,7 +8,7 @@
         name: EKS-NODE-GROUP
         state: present
         cluster_name: Ansible-EKS-CLUSTER
-        node_role: arn:aws:iam::625243961866:role/EKS-WORKER6NODE-ROLE
+        node_role: arn:aws:iam::xxxxxxx:role/EKS-WORKER6NODE-ROLE
         subnets:
           - subnet-0c819740100e5e234
           - subnet-08cfb65242d6db186
