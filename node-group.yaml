@@ -1,0 +1,23 @@
+
+---
+
+- hosts: localhost
+  tasks:
+    - name: create nodegroup
+      community.aws.eks_nodegroup:
+        name: EKS-NODE-GROUP
+        state: present
+        cluster_name: Ansible-EKS-CLUSTER
+        node_role: arn:aws:iam::625243961866:role/EKS-WORKER6NODE-ROLE
+        subnets:
+          - subnet-0c819740100e5e234
+          - subnet-08cfb65242d6db186
+        scaling_config:
+          min_size: 2
+          max_size: 3
+          desired_size: 2
+        disk_size: 20
+        instance_types: 't3.micro'
+        ami_type: 'AL2_x86_64'
+        labels:
+          teste: 'test'
