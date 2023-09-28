@@ -1,0 +1,8 @@
+# vars.yml
+cluster_name: eks-cluster
+region: eu-north-1
+nodegroup_name: my-nodegroup
+node_type: t3.micro
+nodes: 2
+nodes_min: 1
+nodes_max: 3

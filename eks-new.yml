@@ -1,14 +1,8 @@
 ---
 - hosts: localhost
   gather_facts: false
-  vars:
-    cluster_name: eks-cluster
-    region: eu-north-1
-    nodegroup_name: my-nodegroup
-    node_type: t3.micro
-    nodes: 2
-    nodes_min: 1
-    nodes_max: 3
+  vars_files:
+    - vars.yml
 
   tasks:
     - name: create eks cluster and node groups
