@@ -6,7 +6,7 @@ pipeline {
         
          stage('Create eks cluster and node groups') {
            steps {
-               sh 'ansible-playbook eks-new.yml' 
+               sh 'ansible-playbook eks.yml' 
            }
         }
                
