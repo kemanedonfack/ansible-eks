@@ -2,7 +2,7 @@
 - hosts: localhost
   gather_facts: false
   vars_files:
-    - vars.yml
+    - eks-vars.yml
 
   tasks:
     - name: Check if EKS Cluster exists
