@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  gather_facts: false
+  vars:
+    cluster_name: eks-cluster
+    region: eu-north-1
+    nodegroup_name: my-nodegroup
+    node_type: t3.micro
+    nodes: 2
+    nodes_min: 1
+    nodes_max: 3
+
+  tasks:
+    - name: create eks cluster and node groups
+      command: eksctl create cluster --name {{ cluster_name }} --region {{ region }} --nodegroup-name {{ nodegroup_name }} --node-type {{ node_type }} --nodes {{ nodes }} --nodes-min {{ nodes_min }} --nodes-max {{ nodes_max }} --managed
